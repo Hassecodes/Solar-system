@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Anger teckenkodning för dokumentet -->
+    <meta charset="UTF-8" />
+    <!-- Gör sidan responsiv och anpassad för olika enheter -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Länkar till en extern CSS-fil för styling -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Dokumentets titel som visas i webbläsarens flik -->
+    <title>Solaris - Our Solar System</title>
+  </head>
+
+  <body>
+    <!-- Header-sektion med sidtitel och sökfält -->
+    <header>
+      <h1>
+        <a href="index.html" class="home-link">Jupiter - Luppiter</a>
+      </h1>
+      <!-- Sökfält för att låta användaren söka efter planeter -->
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search for a planet..."
+      />
+    </header>
+    
+    <!-- Huvudinnehållet -->
+    <main id="content">
+      <!-- Sektion för att visa planeter och himlakroppar -->
+      <section id="bodiesContainer" aria-label="Planetary Bodies"></section>
+
+      <!-- Artikel som representerar Jupiter i solsystemet -->
+      <article class="solar-system">
+        <figure>
+          <!-- Jupiter som en visuell representation -->
+          <div class="planet jupiter"></div>
+        </figure>
+      </article>
+
+      <!-- Artikel med text och fakta om Jupiter -->
+      <article class="info">
+        <!-- Beskrivning av Jupiter -->
+        <p>
+          Jupiter är den femte planeten från solen och är med stor marginal solsystemets största planet.
+          <br> Dess massa är 2,5 gånger så stor som alla de andra planeternas sammanlagda massa.
+          <br> Planeten är en gasjätte och man är inte säker på om planetens kärna är fast eller flytande.
+        </p>
+        <br>
+        <!-- Fakta-sektion med specifik information om Jupiter -->
+        <section class="fakta">
+          <p>Radie: 69 911 km</p>
+          <br>
+          <p>Yta: 6,142×10^10 km²</p>
+        </section>
+      </article>
+    </main>
+
+    <!-- Extern JavaScript-fil som hanterar sidans funktionalitet -->
+    <script src="main.js"></script>
+  </body>
+</html>

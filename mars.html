@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Anger teckenkodning för dokumentet -->
+    <meta charset="UTF-8" />
+    <!-- Gör sidan responsiv och anpassad för olika enheter -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Länk till extern CSS-fil för styling -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Titel som visas i webbläsarens flik -->
+    <title>Solaris - Our Solar System</title>
+  </head>
+
+  <body>
+    <!-- Header-sektion med sidans titel och sökfält -->
+    <header>
+      <h1>
+        <a href="index.html" class="home-link">Mars - Mars</a>
+      </h1>
+      <!-- Sökfält för att låta användaren söka efter planeter -->
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search for a planet..."
+      />
+    </header>
+
+    <!-- Huvudinnehållet -->
+    <main id="content">
+      <!-- Sektion för att visa planeter eller andra himlakroppar -->
+      <section id="bodiesContainer" aria-label="Planetary Bodies"></section>
+
+      <!-- Artikel som representerar Mars i solsystemet -->
+      <article class="solar-system">
+        <figure>
+          <!-- Visuellt element för att representera Mars -->
+          <div class="planet mars"></div>
+        </figure>
+      </article>
+
+      <!-- Artikel som innehåller information om Mars -->
+      <article class="info">
+        <!-- Beskrivning av Mars -->
+        <p>
+          Mars är den fjärde planeten från solen och solsystemets näst minsta planet.
+          <br> Den har fått sitt namn efter den romerska krigsguden Mars
+          <br> och kallas ibland för "den röda planeten" på grund av sitt rödaktiga utseende.
+          <br> Den röda färgen beror på stora mängder järnoxid som finns fördelat över ytan och i atmosfären.
+        </p>
+        <br>
+        <!-- Fakta-sektion som innehåller Mars-specifik information -->
+        <section class="fakta">
+          <p>Radie: 3 389,5 km</p>
+          <br>
+          <p>Yta: 144 400 000 km²</p>
+        </section>
+      </article>
+    </main>
+
+    <!-- Extern JavaScript-fil som hanterar sidans interaktivitet -->
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Anger teckenkodning för dokumentet -->
+    <meta charset="UTF-8" />
+    <!-- Gör sidan responsiv och anpassad för olika enheter -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Länk till extern CSS-fil för styling -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Titel som visas i webbläsarens flik -->
+    <title>Solaris - Our Solar System</title>
+  </head>
+
+  <body>
+    <!-- Header-sektion med sidans titel och sökfält -->
+    <header>
+      <h1>
+        <a href="index.html" class="home-link">Venus - Venus</a>
+      </h1>
+      <!-- Sökfält för att låta användaren söka efter andra planeter -->
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search for a planet..."
+      />
+    </header>
+
+    <!-- Huvudinnehållet -->
+    <main id="content">
+      <!-- Sektion för att dynamiskt visa data om planeter eller andra himlakroppar -->
+      <section id="bodiesContainer" aria-label="Planetary Bodies"></section>
+
+      <!-- Artikel som representerar Venus i solsystemet -->
+      <article class="solar-system">
+        <figure>
+          <!-- Visuellt element för att representera Venus -->
+          <div class="planet venus"></div>
+        </figure>
+      </article>
+
+      <!-- Artikel som innehåller information om Venus -->
+      <article class="info">
+        <!-- Beskrivning av Venus -->
+        <p>
+          Venus är den andra planeten i solsystemet från solen räknat och den är nästan lika stor som jorden.
+          <br> Då Venus rör sig runt sin egen axel i motsatt riktning mot rörelsen runt solen
+          <br> så kan man säga att den roterar baklänges, vilket endast Venus och Uranus gör.
+        </p>
+        <br>
+        <!-- Fakta-sektion med specifik information om Venus -->
+        <section class="fakta">
+          <p>Radie: 6 051,8 km</p>
+          <br>
+          <p>Yta: 460 200 000 km²</p>
+        </section>
+      </article>
+    </main>
+
+    <!-- Extern JavaScript-fil som hanterar sidans funktionalitet -->
+    <script src="main.js"></script>
+  </body>
+</html>

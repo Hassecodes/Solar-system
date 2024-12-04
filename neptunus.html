@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Anger teckenkodning för dokumentet -->
+    <meta charset="UTF-8" />
+    <!-- Gör sidan responsiv och anpassad för olika enheter -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Länk till extern CSS-fil för styling -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Titel som visas i webbläsarens flik -->
+    <title>Solaris - Our Solar System</title>
+  </head>
+
+  <body>
+    <!-- Header-sektion med sidans titel och sökfält -->
+    <header>
+      <h1>
+        <a href="index.html" class="home-link">Neptunus - Neptunus</a>
+      </h1>
+      <!-- Sökfält för att låta användaren söka efter andra planeter -->
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search for a planet..."
+      />
+    </header>
+
+    <!-- Huvudinnehållet -->
+    <main id="content">
+      <!-- Sektion för att dynamiskt visa data om planeter eller andra himlakroppar -->
+      <section id="bodiesContainer" aria-label="Planetary Bodies"></section>
+
+      <!-- Artikel som representerar Neptunus i solsystemet -->
+      <article class="solar-system">
+        <figure>
+          <!-- Visuellt element för att representera Neptunus -->
+          <div class="planet neptunus"></div>
+        </figure>
+      </article>
+
+      <!-- Artikel som innehåller information om Neptunus -->
+      <article class="info">
+        <!-- Beskrivning av Neptunus -->
+        <p>
+          Neptunus är den åttonde planeten från solen. Neptunus är en så kallad gasjätte,
+          <br> och har fått sitt namn efter havsguden Neptunus i romersk mytologi.
+          <br> Neptunus är mycket lik Uranus, både i fråga om atmosfär och i fråga om kemisk sammansättning – 
+          <br> båda består huvudsakligen av väte, helium och metan.
+        </p>
+        <br>
+        <!-- Fakta-sektion som innehåller specifik information om Neptunus -->
+        <section class="fakta">
+          <p>Radie: 24 622 km</p>
+          <br>
+          <p>Yta: 7,618×10^9 km²</p>
+        </section>
+      </article>
+    </main>
+
+    <!-- Extern JavaScript-fil som hanterar sidans funktionalitet -->
+    <script src="main.js"></script>
+  </body>
+</html>

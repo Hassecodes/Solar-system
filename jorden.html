@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Anger dokumentets teckenkodning -->
+    <meta charset="UTF-8" />
+    <!-- Gör sidan responsiv genom att sätta viewport för mobila enheter -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Länkar till den externa CSS-filen för att styla sidan -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Solaris - Our Solar System</title>
+  </head>
+
+  <body>
+    <!-- Header-sektion för att visa sidans titel och ett sökfält -->
+    <header>
+      <h1>
+        <a href="index.html" class="home-link">jorden - Terra</a>
+      </h1>
+      <!-- Sökfält för att söka efter planeter -->
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search for a planet..."
+      />
+    </header>
+    <main id="content">
+      <!-- Container för att hålla kort eller information om planeter -->
+      <section id="bodiesContainer" aria-label="Planetary Bodies"></section>
+
+      <!-- Sektion för att visa planetens representation i solsystemet -->
+      <article class="solar-system">
+        <figure>
+          <!-- Representerar jorden som en planet -->
+          <div class="planet jorden"></div>
+        </figure>
+      </article>
+
+      <!-- Sektion med information om planeten -->
+      <article class="info">
+        <!-- Beskrivande text om jorden -->
+        <p>
+          Jorden är den tredje planeten från solen och den
+          <br />
+          största av de så kallade stenplaneterna i solsystemet. <br />
+          Jorden är hemvist för alla kända levande varelser.
+        </p>
+        <br />
+        <!-- Fakta-sektion om jordens radie och yta -->
+        <section class="fakta">
+          <p>Radie: 6 378 km</p>
+          <br />
+          <p>Yta: 510 100 000 km²</p>
+        </section>
+      </article>
+    </main>
+
+    <!-- Länk till en extern JavaScript-fil för funktionalitet -->
+    <script src="main.js"></script>
+  </body>
+</html>

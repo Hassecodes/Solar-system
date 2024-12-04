@@ -1,0 +1,204 @@
+/* Grundläggande reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0e0f2c; /* Mörkblå för rymdliknande bakgrund */
+  color: #ffffff; /* Vit text för kontrast */
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  background: #1a1a40; /* Mörkare blå för header */
+
+  input[type="text"] {
+    padding: 10px;
+    margin-top: 10px;
+    width: 30%;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.6s ease;
+
+    &:hover {
+      width: 35%;
+      background-color: #e0e0e0; /* Gör bakgrunden lite mörkare */
+      border: 2px solid #bdbdbd; /* Subtil kantfärg */
+      transform: scale(0.95); /* Minska storleken något för en "tryck-effekt" */
+      box-shadow: inset 0 0 5px #bdbdbd; /* Inre skugga för att simulera insjunkning */
+    }
+  }
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    color: rgb(229, 229, 156);
+  }
+
+  #bodiesContainer {
+    display: flex;
+    flex-wrap: wrap; /* Säkerställ att korten bryter i fall av overflow */
+    justify-content: center; /* Centrera korten */
+    gap: 20px; /* Avstånd mellan varje kort */
+    margin-top: 20px;
+  }
+}
+
+/* Styling för varje planets kort */
+.card {
+  background-color: #252550; /* Mörk violett för kortbakgrund */
+  border-radius: 10px; /* Rundade hörn för kort */
+  padding: 20px;
+  width: 300px; /* Konsistent kortbredd */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Mjuk skugga för djup */
+  transition: transform 0.3s; /* Smidig effekt vid hover */
+
+  &:hover {
+    transform: scale(1.05); /* Gör att kortet poppar upp vid hover */
+  }
+
+  h2 {
+    color: #f0a500; /* Markerad färg för planets namn */
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5; /* Radavstånd för läsbarhet */
+  }
+}
+
+/* Solar system container */
+.solar-system {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Sprid ut elementen över hela bredden */
+  position: relative;
+  height: 600px; /* Höjd för att passa solsystemets höjd */
+  width: 100%; /* Täcker hela bredden av sidan */
+  padding: 0 50px; /* Lite utrymme på sidorna */
+
+  .solen {
+    width: 800px; /* Stor storlek för solen */
+    height: 800px;
+    background: radial-gradient(circle, #ffca28, #ff9800); /* Radial gradient för att simulera solens ljus */
+    border-radius: 50%;
+    position: absolute;
+    left: -710px; /* Flytta solen åt vänster för att ge en delvis synlighet */
+    top: 50%; /* Centrera solen vertikalt */
+    transform: translateY(-50%); /* Korrigera för att hålla solen mitt på vertikal axel */
+    box-shadow: 0 0 150px 50px rgba(255, 202, 40, 0.5); /* Simulera ett ljussken runt solen */
+    transition: 0.6s;
+
+    &:hover {
+      scale: 0.9;
+    }
+  }
+}
+
+/* Planeter */
+.planet {
+  border-radius: 50%;
+  background-color: #ccc; /* Standardfärg för planeter */
+
+  &.merkurius {
+    background-color: #a9a9a9;
+    width: 10px;
+    height: 10px;
+    margin-left: 50px; /* Flytta Merkurius något längre bort från solen */
+    transition: 0.6s;
+
+    &:hover {
+      scale: 1.5;
+    }
+  }
+
+  &.venus {
+    background-color: #f5deb3;
+    width: 20px;
+    height: 20px;
+  }
+
+  &.jorden {
+    background-color: #4682b4;
+    width: 22px;
+    height: 22px;
+    transition: all 0.6s;
+
+    &:active {
+      scale: 1.6;
+      background-color: green;
+    }
+  }
+
+  &.mars {
+    background-color: #fcb46b; /* Uppdaterad färg för Mars */
+    width: 12px;
+    height: 12px;
+  }
+
+  &.jupiter {
+    background-color: #f4a467; /* Ny varm orange-brun färg för Jupiter för att matcha bilden */
+    width: 70px;
+    height: 70px;
+  }
+
+  &.saturnus {
+    background-color: #e5b977;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    border-radius: 50%; /* Gör Saturnus rund */
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -30px;
+      width: 120px; /* Längd på ringen */
+      height: 2px; /* Tunn ring för subtil stil */
+      background-color: #c8b69e; /* Lite ljusare färg för ringen för att matcha din bild */
+      border-radius: 5px; /* Lite rundad ring */
+      transform: rotate(-10deg); /* Lätt lutning åt vänster för att matcha bilden */
+      transition: all 0.6s ease; /* Mjuk övergång för effekterna */
+    }
+
+    &:hover::before {
+      scale: 1.5;
+      height: 4px; /* Gör ringen tjockare */
+      transform: rotate(-360deg); /* Roterar 360 grader */
+      background-color: #e1d2b5; /* Förändra färgen något för att markera effekten */
+    }
+  }
+
+  &.uranus {
+    background-color: #87cefa;
+    width: 35px;
+    height: 35px;
+  }
+
+  &.neptunus {
+    background-color: #4169e1;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Fakta och info */
+.info {
+  margin-top: -350px; /* Justera värdet beroende på hur högt du vill flytta upp det */
+  font-size: 18px;
+
+  .fakta {
+    font-style: italic;
+  }
+}

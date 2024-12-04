@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Ange att sidan är responsiv och anpassad för olika skärmstorlekar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Länk till den externa CSS-filen för styling -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Solaris - Vårt sol system</title>
+  </head>
+
+  <body>
+    <header>
+      <!-- Titel för sidan som visas överst -->
+      <h1>
+        <a href="index.html" class="home-link">Vårt sol system</a>
+      </h1>
+      <!-- Inputfält för att söka efter en planet -->
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search for a planet..."
+      />
+    </header>
+    <main id="content">
+      <!-- Behållare för att dynamiskt visa planetkort eller annan information -->
+      <div id="bodiesContainer"></div>
+    </main>
+
+    <div class="solar-system">
+      <!-- Representerar solen -->
+      <div class="solen"></div>
+      <!-- Behållare för alla planeter -->
+      <div class="planets">
+        <!-- Merkurius: Den första planeten från solen -->
+        <div class="planet merkurius"></div>
+        <!-- Venus: Den andra planeten från solen -->
+        <div class="planet venus"></div>
+        <!-- Jorden: Vår planet -->
+        <div class="planet jorden"></div>
+        <!-- Mars: Den fjärde planeten från solen -->
+        <div class="planet mars"></div>
+        <!-- Jupiter: Den största planeten -->
+        <div class="planet jupiter"></div>
+        <!-- Saturnus: Känd för sina ringar -->
+        <div class="planet saturnus"></div>
+        <!-- Uranus: Den sjunde planeten -->
+        <div class="planet uranus"></div>
+        <!-- Neptunus: Den åttonde och sista planeten -->
+        <div class="planet neptunus"></div>
+      </div>
+    </div>
+
+    <!-- Länk till den externa JavaScript-filen för funktionalitet -->
+    <script src="main.js"></script>
+  </body>
+</html>

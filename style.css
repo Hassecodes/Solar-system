@@ -1,0 +1,225 @@
+/* Grundläggande reset */
+* {
+    margin: 0; /* Tar bort standardmarginaler */
+    padding: 0; /* Tar bort standardutfyllnad */
+    box-sizing: border-box; /* Gör att padding inte påverkar elementets totala storlek */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Standardtypsnitt */
+    background-color: #0e0f2c; /* Mörkblå för rymdliknande bakgrund */
+    color: #ffffff; /* Vit text för kontrast */
+}
+
+.home-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.home-link:hover {
+    text-decoration: underline;
+}
+
+header {
+    padding: 20px; /* Ger utrymme runt headerns innehåll */
+    text-align: center; /* Centrera texten */
+    background: #1a1a40; /* Mörkare blå bakgrund för header */
+}
+
+input[type="text"] {
+    padding: 10px; /* Inre utfyllnad för inputfältet */
+    margin-top: 10px; /* Litet mellanrum ovanför */
+    width: 30%; /* Bredd på inputfältet */
+    border: none; /* Tar bort standardkant */
+    border-radius: 10px; /* Rundade hörn */
+    font-size: 16px; /* Textstorlek */
+    transition: all 0.6s ease; /* Smidig övergång för ändringar */
+}
+
+input:hover {
+    width: 35%; /* Ökar bredden något vid hover */
+    background-color: #e0e0e0; /* Gör bakgrunden ljusare */
+    border: 2px solid #bdbdbd; /* Lägg till subtil kant */
+    transform: scale(0.95); /* Gör fältet något mindre för "tryck-effekt" */
+    box-shadow: inset 0 0 5px #bdbdbd; /* Inre skugga för 3D-effekt */
+}
+
+main {
+    padding: 20px; /* Utrymme runt huvudsektionen */
+    display: flex; /* Gör huvudsektionen flexbox */
+    flex-direction: column; /* Ordna innehåll vertikalt */
+    align-items: center; /* Centrera innehållet horisontellt */
+}
+
+h1 {
+    color: rgb(229, 229, 156); /* Ljus gul textfärg */
+}
+
+#bodiesContainer {
+    display: flex; /* Gör att element visas i rad */
+    flex-wrap: wrap; /* Tillåt radbrytning vid overflow */
+    justify-content: center; /* Centrera innehållet */
+    gap: 20px; /* Avstånd mellan element */
+    margin-top: 20px; /* Extra utrymme ovanför */
+}
+
+/* Styling för varje planets kort */
+.card {
+    background-color: #252550; /* Mörk violett bakgrund */
+    border-radius: 10px; /* Rundade hörn */
+    padding: 20px; /* Inre utfyllnad */
+    width: 300px; /* Konsistent bredd */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Mjuk skugga för djup */
+    transition: transform 0.3s; /* Smidig effekt vid hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Gör kortet större vid hover */
+}
+
+.card h2 {
+    color: #f0a500; /* Markerad färg för planets namn */
+}
+
+.card p {
+    font-size: 14px; /* Mindre textstorlek */
+    line-height: 1.5; /* Ökat radavstånd för läsbarhet */
+}
+
+/* Solar system container */
+.solar-system {
+    display: flex; /* Använd flexbox för att positionera element */
+    align-items: center; /* Vertikalt centrerade */
+    justify-content: space-between; /* Sprid elementen över hela bredden */
+    position: relative; /* Krävs för absolut positionerade element inuti */
+    height: 600px; /* Sätt höjd för att passa solsystemet */
+    width: 100%; /* Täcker hela bredden av sidan */
+    padding: 0 50px; /* Utrymme på sidorna */
+}
+
+/* Solen */
+.solen {
+    width: 800px; /* Storlek på solen */
+    height: 800px;
+    background: radial-gradient(circle, #ffca28, #ff9800); /* Simulerar ljus runt solen */
+    border-radius: 50%; /* Gör solen rund */
+    position: absolute; /* Placera solen relativt till föräldern */
+    left: -710px; /* Flytta solen åt vänster för delvis synlighet */
+    top: 50%; /* Centrera vertikalt */
+    transform: translateY(-50%); /* Justera för exakt centrering */
+    box-shadow: 0 0 150px 50px rgba(255, 202, 40, 0.5); /* Ljussken runt solen */
+    transition: 0.6s; /* Smidig övergång för hover-effekt */
+}
+
+.solen:hover {
+    scale: 0.9; /* Minska storleken något vid hover */
+}
+
+/* Planeterna */
+.planets {
+    display: flex; /* Använd flexbox för placering */
+    align-items: center; /* Vertikalt centrerade */
+    justify-content: space-around; /* Sprid planeterna jämnt */
+    width: 100%; /* Full bredd */
+    position: relative; /* Behövs för att placera planeter korrekt */
+    z-index: 1; /* Placera planeterna över solens ljussken */
+    gap: 50px; /* Avstånd mellan planeter */
+}
+
+.planet {
+    border-radius: 50%; /* Gör planeter runda */
+    background-color: #ccc; /* Standardfärg för planeter */
+}
+
+/* Anpassning för varje planet */
+.merkurius {
+    background-color: #a9a9a9; /* Specifik färg för Merkurius */
+    width: 10px;
+    height: 10px;
+    margin-left: 50px; /* Placera Merkurius längre från solen */
+    transition: 0.6s;
+}
+
+.merkurius:hover {
+    scale: 1.5; /* Gör planeten större vid hover */
+}
+
+.info {
+    margin-top: -350px; /* Flytta info-sektionen uppåt */
+    font-size: 18px; /* Större textstorlek */
+}
+
+.fakta {
+    font-style: italic; /* Kursiv stil för fakta-text */
+}
+
+.venus {
+    background-color: #f5deb3; /* Specifik färg för Venus */
+    width: 20px;
+    height: 20px;
+}
+
+.jorden {
+    background-color: #4682b4; /* Specifik färg för Jorden */
+    width: 22px;
+    height: 22px;
+    transition: all 0.6s; /* Smidig övergång */
+}
+
+.jorden:active {
+    scale: 1.6; /* Gör Jorden större när den aktiveras */
+    background-color: green; /* Ändra färg vid klick */
+}
+
+.mars {
+    background-color: #fcb46b; /* Uppdaterad färg för Mars */
+    width: 12px;
+    height: 12px;
+}
+
+.jupiter {
+    background-color: #f4a467; /* Specifik färg för Jupiter */
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; /* Gör Jupiter rund */
+}
+
+.saturnus {
+    background-color: #e5b977; /* Specifik färg för Saturnus */
+    width: 60px;
+    height: 60px;
+    position: relative;
+    border-radius: 50%; /* Gör Saturnus rund */
+}
+
+.saturnus::before {
+    content: ""; /* Ringen runt Saturnus */
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    width: 120px; /* Längd på ringen */
+    height: 2px; /* Tunn ring */
+    background-color: #c8b69e; /* Färg för ringen */
+    border-radius: 5px; /* Rundad ring */
+    transform: rotate(-10deg); /* Lätt lutning */
+    transition: all 0.6s ease; /* Smidig övergång */
+}
+
+.saturnus:hover::before {
+    scale: 1.5; /* Gör ringen större */
+    height: 4px; /* Gör ringen tjockare */
+    transform: rotate(-360deg); /* Roterar ringen */
+    background-color: #e1d2b5; /* Ändrad färg vid hover */
+}
+
+.uranus {
+    background-color: #87cefa; /* Specifik färg för Uranus */
+    width: 35px;
+    height: 35px;
+}
+
+.neptunus {
+    background-color: #4169e1; /* Specifik färg för Neptunus */
+    width: 32px;
+    height: 32px;
+}

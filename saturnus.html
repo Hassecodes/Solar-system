@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Anger teckenkodning för dokumentet -->
+    <meta charset="UTF-8" />
+    <!-- Gör sidan responsiv och anpassad för olika enheter -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Länk till extern CSS-fil för styling -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Titel som visas i webbläsarens flik -->
+    <title>Solaris - Our Solar System</title>
+  </head>
+
+  <body>
+    <!-- Header-sektion med sidans titel och sökfält -->
+    <header>
+      <h1>
+        <a href="index.html" class="home-link">Saturnus - Saturnus</a>
+      </h1>
+      <!-- Sökfält för att låta användaren söka efter andra planeter -->
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search for a planet..."
+      />
+    </header>
+
+    <!-- Huvudinnehållet -->
+    <main id="content">
+      <!-- Sektion för att visa data om planeter eller andra himlakroppar -->
+      <section id="bodiesContainer" aria-label="Planetary Bodies"></section>
+
+      <!-- Artikel som representerar Saturnus i solsystemet -->
+      <article class="solar-system">
+        <figure>
+          <!-- Visuellt element för att representera Saturnus -->
+          <div class="planet saturnus"></div>
+        </figure>
+      </article>
+
+      <!-- Artikel som innehåller information om Saturnus -->
+      <article class="info">
+        <!-- Beskrivning av Saturnus -->
+        <p>
+          Saturnus är den sjätte planeten från solen och den näst största i solsystemet.
+          <br> Den är en gasjätte, känd sedan förhistorisk tid. Galileo Galilei var den första
+          <br> att observera den genom ett teleskop år 1610. Han såg planeten när ringarnas läge
+          <br> fick planeten att se ut som tre planeter i en klump, vilket gjorde dåtidens
+          <br> forskare mycket förbryllade.
+        </p>
+        <br>
+        <!-- Fakta-sektion med specifik information om Saturnus -->
+        <section class="fakta">
+          <p>Radie: 58 232 km</p>
+          <br>
+          <p>Yta: 4,27×10^10 km²</p>
+        </section>
+      </article>
+    </main>
+
+    <!-- Extern JavaScript-fil som hanterar sidans funktionalitet -->
+    <script src="main.js"></script>
+  </body>
+</html>
