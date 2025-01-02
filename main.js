@@ -28,15 +28,21 @@ async function fetchBodies() {
     try {
         const response = await fetch(`${apiBaseUrl}/bodies`, {
             method: 'GET',
-            headers: { 'x-zocom': 'solaris-2ngXkR6S02ijFrTP' },
+            headers: { 'x-zocom': apiKey },
         });
 
         if (!response.ok) {
             throw new Error(`API request failed with status ${response.status}`);
         }
 
-        allBodies = await response.json(); // Spara resultatet i `allBodies`
-        displayBodies(allBodies); // Visa himlakropparna på sidan
+        const data = await response.json();
+
+        // Kontrollera att bodies är en array innan användning
+        if (Array.isArray(data.bodies)) {
+            allBodies = data.bodies; // Spara arrayen i allBodies
+        } else {
+            throw new Error("Invalid API response format: 'bodies' is not an array.");
+        }
     } catch (error) {
         console.error("Error fetching solar system data:", error.message);
         showError("Could not fetch data. Please try again later.");
@@ -55,31 +61,12 @@ function displayBodies(bodies) {
     container.innerHTML = ''; // Rensa tidigare innehåll
 
     if (bodies.length === 0) {
-        container.innerHTML = '<p>No planets found.</p>';
+        const searchTerm = getSearchInputValue();
+        if (searchTerm) {
+            container.innerHTML = `<p>No planets found matching "${searchTerm}".</p>`;
+        }
         return;
     }
-
-    // Skapa ett kort för varje himlakropp
-    bodies.forEach(body => {
-        const card = createBodyCard(body);
-        container.appendChild(card);
-    });
-}
-
-// Skapar ett kort för en specifik himlakropp
-function createBodyCard(body) {
-    const card = document.createElement('div');
-    card.classList.add('card');
-    card.innerHTML = `
-        <h2>${body.name} (${body.latinName})</h2>
-        <p>${body.desc}</p>
-        <p><strong>Type:</strong> ${body.type}</p>
-        <p><strong>Circumference:</strong> ${body.circumference} km</p>
-        <p><strong>Distance from the sun:</strong> ${body.distance} km</p>
-        <p><strong>Day temperature:</strong> ${body.temp.day}°C, <strong>Night:</strong> ${body.temp.night}°C</p>
-        <p><strong>Moons:</strong> ${body.moons.length > 0 ? body.moons.join(', ') : 'No moons'}</p>
-    `;
-    return card;
 }
 
 // Hanterar sök-input när användaren trycker på "Enter"
